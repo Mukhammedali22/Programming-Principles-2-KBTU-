@@ -1,14 +1,12 @@
 n = int(input())
 dict = {}
-c = set()
 for i in range(n):
     student, money = input().split()
-    c.add(student)
     if student in dict:
         dict[student] += int(money)
     else:
         dict[student] = int(money)
-list_of_students = list(c)
+list_of_students = list(dict.keys())
 list_of_students.sort()
 m = max(dict.values())
 for i in list_of_students:
