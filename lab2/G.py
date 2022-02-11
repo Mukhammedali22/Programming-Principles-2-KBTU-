@@ -32,3 +32,30 @@ for i in h_dict.keys():
                 number_of_remaining_demons -= h_dict[i]
 print("Demons left:", number_of_remaining_demons)
 
+'''    
+number_of_demons = int(input())                  work with only dictionary
+d_dict = {}                                      
+for i in range(number_of_demons):
+    s = input().split()
+    if s[1] in d_dict:
+        d_dict[s[1]] += 1 
+    else:
+        d_dict[s[1]] = 1 
+amount_of_hunters = int(input())
+h_dict = {}
+for i in range(amount_of_hunters):
+    s = input().split()
+    if s[1] in h_dict:
+        h_dict[s[1]] += int(s[2])
+    else:
+        h_dict[s[1]] = int(s[2]) 
+number_of_remaining_demons = number_of_demons
+for i in h_dict.keys():
+    for j in d_dict.keys():
+        if i == j:
+            if h_dict[i] >= d_dict[j]:
+                number_of_remaining_demons -= d_dict[j]
+            else:
+                number_of_remaining_demons -= h_dict[i]
+print("Demons left:", number_of_remaining_demons)
+'''
