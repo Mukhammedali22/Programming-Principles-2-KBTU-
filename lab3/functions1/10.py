@@ -1,6 +1,3 @@
-from ast import Pass
-
-
 def unique(my_list):
     new_list = []
     for i in my_list:
