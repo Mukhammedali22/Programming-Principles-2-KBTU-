@@ -11,7 +11,15 @@ def spy_game(nums):
         elif nums[i] == 7:
             if nums[i] not in a:
                 a.append(nums[i])
-    print(True) if a == checker else print(False)              
+    print(True) if a == checker else print(False)  
+    
+    '''
+    for i in range(len(nums) - 2):
+        if nums[i] == nums[i + 1] and int(nums[i]) == 0 and int(nums[i + 2]) == 7:
+            print(True)
+            break
+    else: print(False)
+    '''
 
 spy_game([1,2,4,0,0,7,5]) #--> True
 spy_game([1,0,2,4,0,5,7]) #--> True
