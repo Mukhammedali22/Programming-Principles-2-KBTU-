@@ -1,5 +1,5 @@
 import math
-number_of_sides = float(input("Input number of sides: "))
+number_of_sides = int(input("Input number of sides: "))
 lenght_of_side = float(input("Input the length a side: "))
 # площадь правильного многоугольника равна произведению радиуса вписанной окружности и полупериметра
 angle_of_polygon = (number_of_sides - 2) / number_of_sides * 180 # находим угол многоугольника
