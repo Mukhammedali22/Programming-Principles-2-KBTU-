@@ -1,6 +1,7 @@
 import json
 with open("sample-data.json") as jsonFile:
     x = json.load(jsonFile)
+    jsonFile.close()
 print(
 """
 Interface Status
