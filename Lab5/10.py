@@ -1,11 +1,12 @@
 import re
-txt =  "myName perfectNumber, snakeCase, upperCase, binToDec, aliZak"  #camel case
-x = re.findall("[a-z]+[A-Z]+[a-z]+", txt)
-print(x)
+#txt = input()
+txt = "youArePrettiestGirlIHaveEverSeen"
+x = re.findall("^[a-z]+", txt) + re.findall("[A-Z][a-z]*", txt)
+#re.findall("^[a-z]+", txt) чтобы получить первое слово начинающиеся с маленькой буквы "you"
+#re.findall("[A-Z][a-z]*", txt) все остальные слова начинающиеся с большой буквой
+snake_case = ""
 for i in x:
-    f, s = "", ""
-    for j in i:
-        if j >= 'a' and j <= 'z': f += j
-        else: break
-        s = i.replace(f, "")
-    print(f + '_' + s.lower(), end = " ")
+    if i[0].isupper():
+        snake_case += '_'
+    snake_case += i.lower()
+print(snake_case)    
