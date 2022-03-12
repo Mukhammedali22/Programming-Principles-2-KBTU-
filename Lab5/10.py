@@ -2,7 +2,7 @@ import re
 #txt = input()
 txt = "youArePrettiestGirlIHaveEverSeen"
 x = re.findall("^[a-z]+", txt) + re.findall("[A-Z][a-z]*", txt)
-#re.findall("^[a-z]+", txt) чтобы получить первое слово начинающиеся с маленькой буквы "you"
+#re.findall("^[a-z]+", txt) чтобы получить первое слово начинающийся с маленькой буквы это "you"
 #re.findall("[A-Z][a-z]*", txt) все остальные слова начинающиеся с большой буквой
 snake_case = ""
 for i in x:
