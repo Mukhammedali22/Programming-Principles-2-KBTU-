@@ -3,7 +3,7 @@ if all(my_list):
     product = 1
     for i in my_list:
         product *= i
-    print(sum)
+    print(product)
 else:
     print("NO")
 
