@@ -1,7 +1,7 @@
 import re
 #txt = input()
-txt = "YouArePrettiestGirlIHaveEverSeen"
-x = re.sub(r"([A-Z][a-z]*)([A-Z][a-z]*)", r"\1 \2 ", txt).strip()
+txt = "youArePrettiestGirlIHaveEverSeen"
+x = re.sub(r"([A-Z]|[a-z][a-z]*)([A-Z][a-z]*)", r"\1 \2 ", txt).strip()
 x = re.sub(" ", "_", x).lower()
 print(x)
 
