@@ -1,18 +1,12 @@
 my_list = [i for i in range(1, 10)]
-if all(my_list):
-    product = 1
-    for i in my_list:
-        product *= i
-    print(product)
-else:
-    print("NO")
+product = 1
+for i in range(len(my_list)):
+    product *= my_list[i]
+print(product)
 
-'''  
+''' 
 import math                                # second way
 a = [i for i in range(1, 10)]
-if all(a):
-    product = math.prod(a)
-    print(product)
-else:
-    print("Not iterable")
+product = math.prod(a)
+print(product)
 '''
