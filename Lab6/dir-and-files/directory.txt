@@ -1,0 +1,17 @@
+list of only directories:
+.vscode
+Final
+informatics
+LAB1
+LAB10
+LAB11
+LAB2
+LAB3
+LAB4
+LAB5
+LAB6
+LAB7
+LAB8
+LAB9
+midterm
+лабки
