@@ -23,7 +23,7 @@ for path, subdirs, files in os.walk(root):
         file.write(name + "\n")
 file.close()
 #print("\nlist of all directories and files:\n")
-all = open("all.txt", "x")
+all = open("all.txt", "x", encoding = "utf-8")
 all.write("list of all directories and files:\n")
 for path, subdirs, files in os.walk(root):
     for name in files:
