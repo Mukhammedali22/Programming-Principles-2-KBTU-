@@ -37,7 +37,7 @@ enemy = pygame.image.load("images\\Enemy.png")
 player = pygame.image.load("images\\Player.png")
 road = pygame.image.load("images\\Road.png")
 
-#Create a white screen 
+#Create a green screen and show game splash screen
 DISPLAYSURF = pygame.display.set_mode(SCREEN_SIZE)
 DISPLAYSURF.fill(GREEN)
 DISPLAYSURF.blit(name, (15, 150))
@@ -132,6 +132,7 @@ moneys.add(M1)
 INC_SPEED = pygame.USEREVENT + 1
 pygame.time.set_timer(INC_SPEED, 2500)
 
+#Starting point of our game time
 start_time = time.time()
 
 #Game Loop
@@ -146,6 +147,8 @@ while True:
         if event.type == pygame.KEYDOWN and event.key == pygame.K_p:
             if PAUSE: PAUSE = False
             else: PAUSE = True
+                
+        #Restart the game and initialize main variables
         if event.type == pygame.KEYDOWN and event.key == pygame.K_r:
             for entity in all_sprites:
                 entity.__init__() 
@@ -155,12 +158,14 @@ while True:
             PAUSE, END = False, False
             start_time = time.time()
             
+    #Check game state     
     if END:
 
         pass
 
     else:    
-
+        
+        #Check game state
         if PAUSE:
 
             pass
@@ -188,6 +193,7 @@ while True:
                 pygame.mixer.Sound('sounds\\Mario Coin.mp3').play()
                 M1.change_location()
             
+            #To set end point
             end_time = time.time()
             x = round(end_time - start_time, 2)
             game_time = font_small.render("time: " + str(x), True, BLACK)
