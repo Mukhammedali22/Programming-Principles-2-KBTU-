@@ -55,15 +55,15 @@ class Money(pygame.sprite.Sprite):
         self.image = pygame.transform.scale(self.image, (30, 30))
         self.image.set_colorkey(WHITE)
         self.rect = self.image.get_rect()
-        self.rect.center = (random.randint(15, 370), -15)
+        self.rect.center = (random.randint(15, 385), -15)
 
     def change_location(self):
-        self.rect.center = (random.randint(15, 370), -15)
+        self.rect.center = (random.randint(15, 385), -15)
 
     def move(self):
         self.rect.move_ip(0, 3)
         if self.rect.top > 600:
-            self.rect.center = (random.randint(15, 370), -15)
+            self.rect.center = (random.randint(15, 385), -15)
 
     def draw(self):
         DISPLAYSURF.blit(self.image, self.rect)
