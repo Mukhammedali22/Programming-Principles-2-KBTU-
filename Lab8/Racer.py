@@ -73,7 +73,7 @@ class Enemy(pygame.sprite.Sprite):
         super().__init__() 
         self.image = enemy
         self.rect = self.image.get_rect()
-        self.rect.center = (random.randint(48, SCREEN_WIDTH - 48), -48)
+        self.rect.center = (random.randint(24, SCREEN_WIDTH - 24), -48)
     
     def move(self):
         global SCORE, USER_SPEED
@@ -82,7 +82,7 @@ class Enemy(pygame.sprite.Sprite):
             SCORE += 1
             if SCORE % 10 == 0 and SCORE != 0:
                 USER_SPEED += 1
-            self.rect.center = (random.randint(48, SCREEN_WIDTH - 48), -48)
+            self.rect.center = (random.randint(24, SCREEN_WIDTH - 24), -48)
 
     def draw(self):
         DISPLAYSURF.blit(self.image, self.rect)
