@@ -44,7 +44,7 @@ DISPLAYSURF.blit(name, (15, 150))
 DISPLAYSURF.blit(restart_button, (30, 450))
 DISPLAYSURF.blit(pause_button, (30, 500))
 DISPLAYSURF.blit(exit_button, (30, 550))
-pygame.display.set_caption("Game")
+pygame.display.set_caption("Street Racer")
 pygame.display.update()
 time.sleep(3)
 
