@@ -154,7 +154,7 @@ while True:
                 entity.__init__() 
             M1.change_location()
             SCORE, MONEY = 0, 0
-            SPEED, MOVE = 5, 5
+            SPEED, USER_SPEED = 5, 5
             PAUSE, END = False, False
             start_time = time.time()
             
