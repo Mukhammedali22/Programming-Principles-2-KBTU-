@@ -135,6 +135,8 @@ pygame.time.set_timer(INC_SPEED, 2500)
 #Starting point of our game time
 start_time = time.time()
 
+background_music = pygame.mixer.music.load("sounds\\background.wav")
+pygame.mixer.music.play(-1)
 #Game Loop
 while True:
     #Cycles through all events occuring  
@@ -157,6 +159,8 @@ while True:
             SPEED, USER_SPEED = 5, 5
             PAUSE, END = False, False
             start_time = time.time()
+            #background_music = pygame.mixer.music.load("sounds\\background.wav")
+            pygame.mixer.music.play(-1)
             
     #Check game state     
     if END:
@@ -204,6 +208,7 @@ while True:
                 
                 END = True
 
+                pygame.mixer.music.stop()
                 pygame.mixer.Sound('sounds\\crash.wav').play()
                 time.sleep(1)
 
@@ -224,4 +229,3 @@ while True:
                    
             pygame.display.update()
             FramePerSec.tick(FPS)
-
