@@ -89,7 +89,7 @@ class Money(pygame.sprite.Sprite):
         self.rect.center = (random.randint(15, 385), -15)
 
     def move(self):
-        self.rect.move_ip(0, 5)
+        self.rect.move_ip(0, USER_SPEED)
         if self.rect.top > 600:
             self.rect.center = (random.randint(15, 385), -15)
 
