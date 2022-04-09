@@ -191,6 +191,7 @@ while True:
             SPEED, USER_SPEED = 7, 5
             PAUSE, END = False, False
             y = 0
+            T1.__init__()
             T1.start()
             pygame.mixer.music.play(-1)
         
